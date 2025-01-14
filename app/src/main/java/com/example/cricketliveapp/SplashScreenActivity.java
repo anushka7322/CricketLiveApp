@@ -5,31 +5,16 @@ import android.content.Intent;
 import android.graphics.Path;
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Handler;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.style.UnderlineSpan;
-import android.view.View;
+import android.util.Log;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
-import android.widget.TextView;
-
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.cricketliveapp.databinding.ActivitySplashScreenBinding;
 
 public class SplashScreenActivity extends AppCompatActivity {
     ImageView logo, logo_bg, ball;
-    Animation rotation, rotate;
+    Animation first_screen_animation;
     ObjectAnimator objectAnimator, alphaanimationball, alpahaanimationlogo_bg, alphaanimationlogo;
 
     @Override
@@ -69,13 +54,17 @@ public class SplashScreenActivity extends AppCompatActivity {
         alphaanimationlogo.setDuration(5000);
         alphaanimationlogo.start();
 
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        }, 20000);
+
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Log.d("SplashScreen", "Transitioning to MainActivity");
+                Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
+                startActivity(intent);
+//                overridePendingTransition(R.anim.second_activity_enter, R.anim.first_activity_enter);
+                finish();
+            }
+        }, 6000);
     }
 }
