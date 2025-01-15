@@ -32,24 +32,45 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    TabLayout tabLayout_main;
-    ViewPager2 viewpage_main;
-    FragmentManager fragmentManager;
-    PagerAdaptor pagerAdaptor;
+    private TabLayout tabLayout_main;
+    private ViewPager2 viewpage_main;
+    private PagerAdaptor pagerAdaptor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Log.d("MainActivity", "MainActivity onCreate");
-
         tabLayout_main = findViewById(R.id.tab_main_layout);
         viewpage_main = findViewById(R.id.view_main_pagger);
-        fragmentManager = getSupportFragmentManager();
-        pagerAdaptor = new PagerAdaptor(fragmentManager, getLifecycle());
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        pagerAdaptor = new PagerAdaptor(fragmentManager, getLifecycle());
         viewpage_main.setAdapter(pagerAdaptor);
+
+        tabLayout_main.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewpage_main.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+        viewpage_main.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                tabLayout_main.selectTab(tabLayout_main.getTabAt(position));
+            }
+        });
 
         new TabLayoutMediator(tabLayout_main, viewpage_main, (tab, position) -> {
             if(position == 0) {

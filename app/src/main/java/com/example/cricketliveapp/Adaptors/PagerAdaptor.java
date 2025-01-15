@@ -18,11 +18,11 @@ public class PagerAdaptor extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        if(position == 0) {
-            return new HomeFragment();
-        } else {
+        if (position == 1) {
             return new LiveFragment();
         }
+
+        return new HomeFragment();
     }
 
     @Override

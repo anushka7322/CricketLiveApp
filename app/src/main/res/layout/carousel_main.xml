@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    app:cardCornerRadius="@dimen/_12sdp"
+    android:focusable="true"
+    android:id="@+id/carousel_cardview"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/item1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_15sdp">
+
+                <TextView
+                    android:id="@+id/match_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="SriLanka tour of New Zealand, 3rd ODI match"
+                    android:textColor="#2a257c"
+                    android:textSize="@dimen/_17sdp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/match_date"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/match_title"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="Fri, 3 Jan"
+                        android:textColor="#818589"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <TextView
+                        android:id="@+id/match_time"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/match_title"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/textView2"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="\u2022 08:30AM"
+                        android:textColor="#818589"
+                        android:textSize="@dimen/_14sdp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/live_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_fill_alert"
+                android:drawableLeft="@drawable/live_icon"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="@dimen/_10sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:text="Live"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_3sdp"
+            android:background="#E5E4E2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_25sdp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/first_team_flag"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/_20sdp"
+                    android:src="@drawable/first_flag"
+                    android:translationZ="@dimen/_20sdp" />
+
+                <TextView
+                    android:id="@+id/first_team_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:drawableRight="@drawable/icon"
+                    android:text="SA" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/first_team_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="105-6"
+                    android:textColor="#2a257c" />
+
+                <TextView
+                    android:id="@+id/firts_team_overs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="26.0 Over"
+                    android:textColor="#818589" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:src="@drawable/arrow_icon" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/second_team_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="105-6"
+                        android:textColor="#2a257c" />
+
+                    <TextView
+                        android:id="@+id/second_team_overs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="26.0 Over"
+                        android:textColor="#818589" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/second_team_flag"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_20sdp"
+                        android:src="@drawable/second_flag"
+                        android:translationZ="@dimen/_20sdp" />
+
+                    <TextView
+                        android:id="@+id/second_team_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:drawableRight="@drawable/ball_icon"
+                        android:text="NZ" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_3sdp"
+            android:background="#E5E4E2" />
+        <TextView
+            android:id="@+id/match_message"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_14sdp"
+            android:paddingStart="@dimen/_20sdp"
+            android:textColor="#2a257c"
+            android:fontFamily="@font/montserrat_bold"
+            android:paddingEnd="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Sri Lanka yet to bat" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

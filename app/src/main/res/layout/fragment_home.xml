@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.HomeFragment"
-    android:id="@+id/home_layout">
+    tools:context=".Fragments.HomeFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:background="@drawable/card_background"
+        android:elevation="@dimen/_5sdp"
+        app:cardPreventCornerOverlap="true"
+        app:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -14,22 +25,34 @@
         android:layout_margin="@dimen/_5sdp"
         android:layout_marginTop="@dimen/_30sdp"
         android:background="@color/white"
+        android:elevation="12dp"
+        app:cardElevation="12dp"
+        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="@dimen/_9sdp"
-        app:cardMaxElevation="@dimen/_28sdp"
-        app:cardPreventCornerOverlap="true"
-        tools:layout_editor_absoluteX="6dp">
-
-    </androidx.cardview.widget.CardView>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/_100sdp"
-        android:background="@drawable/card_background"
-        app:cardMaxElevation="@dimen/_10sdp"
         app:cardPreventCornerOverlap="true"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.111">
 
-</RelativeLayout>
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/main_carousel_container"
+            android:clipToPadding="false"
+            />
+
+        <androidx.constraintlayout.helper.widget.Carousel
+            android:id="@+id/main_carousel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:carousel_forwardTransition="@+id/forward"
+            app:carousel_backwardTransition="@+id/backward"
+            app:carousel_infinite="true">
+
+        </androidx.constraintlayout.helper.widget.Carousel>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

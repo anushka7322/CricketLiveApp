@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="@dimen/_2sdp" android:alpha="0.2">
+        <shape>
+            <solid android:color="#808080"/>
+            <padding
+                android:right="1dp"
+                android:left="1dp"
+                android:bottom="@dimen/_2sdp" />
+            <size android:height="45dp"/>
+        </shape>
+    </item>
+    <item android:gravity="center" android:height="@dimen/_45sdp">
+        <bitmap android:src="@drawable/new_zealand_flag"/>
+    </item>
+</layer-list>
