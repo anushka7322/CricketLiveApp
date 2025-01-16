@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="@dimen/_260sdp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:clickable="true"
     app:cardCornerRadius="@dimen/_12sdp"
     android:focusable="true"
     android:id="@+id/carousel_cardview"
-    android:foreground="?android:attr/selectableItemBackground"
-    android:background="@android:color/white">
+    android:background="@android:color/white"
+    app:cardBackgroundColor="@color/white"
+    app:cardUseCompatPadding="true">
 
     <LinearLayout
         android:id="@+id/item1"
@@ -40,7 +41,7 @@
                     android:fontFamily="@font/montserrat_semibold"
                     android:text="SriLanka tour of New Zealand, 3rd ODI match"
                     android:textColor="#2a257c"
-                    android:textSize="@dimen/_17sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -55,7 +56,7 @@
                         android:fontFamily="@font/montserrat_semibold"
                         android:text="Fri, 3 Jan"
                         android:textColor="#818589"
-                        android:textSize="@dimen/_14sdp" />
+                        android:textSize="@dimen/_9sdp" />
 
                     <TextView
                         android:id="@+id/match_time"
@@ -68,7 +69,7 @@
                         android:fontFamily="@font/montserrat_semibold"
                         android:text="\u2022 08:30AM"
                         android:textColor="#818589"
-                        android:textSize="@dimen/_14sdp" />
+                        android:textSize="@dimen/_9sdp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -81,13 +82,13 @@
                 android:background="@drawable/button_fill_alert"
                 android:drawableLeft="@drawable/live_icon"
                 android:fontFamily="@font/montserrat_bold"
-                android:padding="@dimen/_10sdp"
-                android:paddingStart="@dimen/_12sdp"
-                android:paddingEnd="@dimen/_12sdp"
+                android:padding="@dimen/_5sdp"
+                android:paddingStart="@dimen/_7sdp"
+                android:paddingEnd="@dimen/_7sdp"
                 android:text="Live"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_13sdp" />
+                android:textSize="@dimen/_10sdp" />
 
         </RelativeLayout>
 
@@ -96,71 +97,86 @@
             android:layout_height="@dimen/_3sdp"
             android:background="#E5E4E2" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="@dimen/_25sdp"
+            android:paddingLeft="@dimen/_25sdp"
+            android:paddingRight="@dimen/_25sdp"
+            android:paddingTop="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_15sdp"
             android:background="@color/white">
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/first_team_flag"
-                    android:layout_width="@dimen/_40sdp"
-                    android:layout_height="wrap_content"
-                    android:elevation="@dimen/_20sdp"
-                    android:src="@drawable/first_flag"
-                    android:translationZ="@dimen/_20sdp" />
-
-                <TextView
-                    android:id="@+id/first_team_name"
+                android:layout_alignParentStart="true"
+                android:orientation="horizontal"
+                android:gravity="start">
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:drawableRight="@drawable/icon"
-                    android:text="SA" />
-            </LinearLayout>
+                    android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/_50sdp"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:gravity="center_vertical"
-                android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/first_team_flag"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/_20sdp"
+                        android:src="@drawable/first_flag"
+                        android:translationZ="@dimen/_20sdp" />
 
-                <TextView
-                    android:id="@+id/first_team_score"
+                    <TextView
+                        android:id="@+id/first_team_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:drawableRight="@drawable/icon"
+                        android:text="SA"
+                        android:textColor="#818589"/>
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:text="105-6"
-                    android:textColor="#2a257c" />
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/firts_team_overs"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:text="26.0 Over"
-                    android:textColor="#818589" />
+                    <TextView
+                        android:id="@+id/first_team_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="105-6"
+                        android:textColor="#2a257c" />
+
+                    <TextView
+                        android:id="@+id/firts_team_overs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="26.0 Over"
+                        android:textColor="#818589" />
+                </LinearLayout>
             </LinearLayout>
 
             <ImageView
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:src="@drawable/arrow_icon" />
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:src="@drawable/arrow_icon"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="end">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -198,7 +214,8 @@
                         android:layout_height="wrap_content"
                         android:elevation="@dimen/_20sdp"
                         android:src="@drawable/second_flag"
-                        android:translationZ="@dimen/_20sdp" />
+                        android:translationZ="@dimen/_20sdp"
+                        />
 
                     <TextView
                         android:id="@+id/second_team_name"
@@ -206,11 +223,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_5sdp"
                         android:drawableRight="@drawable/ball_icon"
-                        android:text="NZ" />
+                        android:text="NZ"
+                        android:textColor="#818589"/>
                 </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
-
+        </RelativeLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/_3sdp"
@@ -218,7 +235,7 @@
         <TextView
             android:id="@+id/match_message"
             android:padding="@dimen/_5sdp"
-            android:textSize="@dimen/_14sdp"
+            android:textSize="@dimen/_10sdp"
             android:paddingStart="@dimen/_20sdp"
             android:textColor="#2a257c"
             android:fontFamily="@font/montserrat_bold"
@@ -226,6 +243,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
-            android:text="Sri Lanka yet to bat" />
+            android:text="Sri Lanka yet to bat"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

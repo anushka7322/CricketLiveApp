@@ -1,23 +1,25 @@
 package com.example.cricketliveapp.Adaptors;
-
+//import android.support.v4.app.Fragment;
+//import android.support.v4.app.FragmentManager;
+//import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.cricketliveapp.CardAdaptor;
 import com.example.cricketliveapp.Fragments.CardFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CardFragmentPagerAdaptor extends FragmentStateAdapter implements CardAdaptor {
+public class CardFragmentPagerAdaptor extends FragmentStatePagerAdapter implements CardAdaptor {
     private List<CardFragment> mFragments;
     private float mBaseElevation;
 
-    public CardFragmentPagerAdapter(FragmentManager fm, float baseElevation) {
+    public CardFragmentPagerAdaptor(@NonNull FragmentManager fm, float baseElevation) {
         super(fm);
         mFragments = new ArrayList<>();
         mBaseElevation = baseElevation;
@@ -31,6 +33,7 @@ public class CardFragmentPagerAdaptor extends FragmentStateAdapter implements Ca
     public float getBaseElevation() {
         return mBaseElevation;
     }
+
 
     @Override
     public CardView getCardViewAt(int position) {
@@ -57,4 +60,5 @@ public class CardFragmentPagerAdaptor extends FragmentStateAdapter implements Ca
     public void addCardFragment(CardFragment fragment) {
         mFragments.add(fragment);
     }
+
 }

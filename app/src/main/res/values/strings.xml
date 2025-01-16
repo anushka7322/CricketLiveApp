@@ -5,6 +5,16 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="match_title">SriLanka tour of New Zealand, 3rd ODI match</string>
+    <string name="match_date">Fri, 3 Jan</string>
+    <string name="match_time">&#8226; 08:30AM</string>
+    <string name="team1_name">SA</string>
+    <string name="team2_name">NZ</string>
+    <string name="team1_over">26.0 Over</string>
+    <string name="team2_over">26.0 Over</string>
+    <string name="team1_score">150-6</string>
+    <string name="team2_score">150-6</string>
+    <string name="match_message">Sri Lanka Opted to bat</string>
     <string name="navbar_home">Logo Image for home screen</string>
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris

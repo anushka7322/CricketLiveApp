@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import com.example.cricketliveapp.CardAdaptor;
+import com.example.cricketliveapp.Adaptors.CardAdaptor;
 import com.example.cricketliveapp.R;
 
 public class CardFragment extends Fragment {

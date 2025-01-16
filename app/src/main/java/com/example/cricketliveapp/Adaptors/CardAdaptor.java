@@ -1,4 +1,6 @@
-package com.example.cricketliveapp;
+package com.example.cricketliveapp.Adaptors;
+
+import android.view.ViewGroup;
 
 import androidx.cardview.widget.CardView;
 
@@ -7,7 +9,8 @@ public interface CardAdaptor {
 
     float getBaseElevation();
 
-    CardView getCardView(int position);
+    CardView getCardViewAt(int position);
 
     int getCount();
+
 }

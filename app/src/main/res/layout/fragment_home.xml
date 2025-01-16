@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Fragments.HomeFragment">
 
     <ImageView
@@ -35,24 +36,46 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.111">
+        app:layout_constraintVertical_bias="0.111"
+        app:cardUseCompatPadding="true">
 
-        <androidx.viewpager2.widget.ViewPager2
+        <androidx.viewpager.widget.ViewPager
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/main_carousel_container"
             android:clipToPadding="false"
+            android:clipChildren="false"
             />
 
-        <androidx.constraintlayout.helper.widget.Carousel
-            android:id="@+id/main_carousel"
+        <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:carousel_forwardTransition="@+id/forward"
-            app:carousel_backwardTransition="@+id/backward"
-            app:carousel_infinite="true">
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:tabBackground="@drawable/tab_page_selector"
+            android:background="@color/white"
+            app:tabIndicatorHeight="0dp"
+            app:tabGravity="center"
+            app:tabPaddingStart="@dimen/_10sdp"
+            app:tabPaddingEnd="@dimen/_10sdp"
+            />
 
-        </androidx.constraintlayout.helper.widget.Carousel>
+<!--        <androidx.viewpager.widget.ViewPager-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:id="@+id/main_carousel_container"-->
+<!--            android:clipToPadding="false"-->
+<!--            />-->
+
+<!--        <androidx.constraintlayout.helper.widget.Carousel-->
+<!--            android:id="@+id/main_carousel"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:carousel_forwardTransition="@+id/forward"-->
+<!--            app:carousel_backwardTransition="@+id/backward"-->
+<!--            app:carousel_infinite="true"-->
+<!--            android:background="@color/white">-->
+
+<!--        </androidx.constraintlayout.helper.widget.Carousel>-->
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
